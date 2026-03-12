@@ -204,3 +204,38 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1); /* Teal tinted shadow */
 }
+
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Puts image on TOP, text on bottom */
+        justify-content: center;
+        text-align: center;
+        padding: 100px 5%; /* Adds space for the fixed navbar */
+        height: auto; /* Lets the page grow as long as needed */
+        min-height: 100vh;
+    }
+
+    .hero-image-container {
+        width: 280px; /* Smaller blob for mobile */
+        height: 300px;
+        margin-right: 0;
+        margin-bottom: 40px; /* Space between image and text */
+    }
+
+    .intro-hi, .intro-main {
+        font-size: 2.5rem; /* Smaller font so it doesn't wrap weirdly */
+    }
+
+    .intro-sub {
+        font-size: 1.2rem;
+    }
+
+    .hero-socials {
+        position: relative; /* Removes them from the bottom corner */
+        left: 0;
+        bottom: 0;
+        margin-top: 40px;
+        justify-content: center; /* Centers them under the button */
+    }
+}
