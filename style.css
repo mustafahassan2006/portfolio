@@ -29,10 +29,24 @@ body {
 .logo {
     display: flex;
     align-items: center;
-    gap: 0px;
     font-size: 1.5rem;
     font-weight: 800;
     color: #f8fafc;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease; /* Makes the color fade in smoothly */
+}
+
+.logo:hover {
+    color: #64ffda; /* Entire name turns teal */
+    transform: translateY(-2px); /* Subtle "pop" up */
+}
+
+.logo:hover span {
+    display: inline-block;
+    transform: scale(1.5); /* The dot grows 50% larger on hover */
+    color: #f8fafc; /* The dot changes to white for contrast */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy pop */
 }
 
 
@@ -278,7 +292,26 @@ body {
     mix-blend-mode: normal;
     filter: none;
 }
+.pop-word {
+    display: inline-block; /* Required for the 'lift' to work */
+    transition: transform 0.3s ease, color 0.3s ease;
+    cursor: default;
+}
 
+.pop-word:hover {
+    transform: translateY(-8px); /* Lifts the word up */
+    color: #64ffda; /* Signature teal highlight */
+}
+
+/* Apply the same logic to your typed name */
+#typed-name {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#typed-name:hover {
+    transform: translateY(-8px);
+}
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
     .hero {
