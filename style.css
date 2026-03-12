@@ -207,6 +207,78 @@ body {
 .menu-checkbox, .hamburger {
     display: none;
 }
+
+
+/* About Section Styles */
+.about-section {
+    padding: 150px 10% 80px;
+    min-height: 100vh;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #ccd6f6;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.section-title span {
+    color: #64ffda;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin-right: 10px;
+}
+
+/* This creates the side-by-side look on desktop and stacks on mobile */
+.about-content {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.about-text p {
+    color: #8892b0;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 200px));
+    list-style: none;
+    gap: 10px;
+}
+
+.skills-list li::before {
+    content: "▹";
+    color: #64ffda;
+    margin-right: 10px;
+}
+
+/* Image Styling */
+.image-wrapper {
+    position: relative;
+    max-width: 300px;
+    border-radius: 10px;
+    background-color: #64ffda; /* Teal accent for the image tint */
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 10px;
+    mix-blend-mode: multiply; /* Creates that professional dark-tint look */
+    filter: grayscale(100%) contrast(1);
+    transition: all 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    mix-blend-mode: normal;
+    filter: none;
+}
+
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
     .hero {
@@ -270,5 +342,21 @@ body {
 
     .nav-links li {
         margin: 20px 0;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr; /* Stack everything in one column */
+        text-align: left;
+    }
+
+    .about-image {
+        order: -1; /* Puts image ABOVE text on phones */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .skills-list {
+        grid-template-columns: 1fr 1fr;
     }
 }
