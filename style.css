@@ -204,7 +204,9 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1); /* Teal tinted shadow */
 }
-
+.menu-checkbox, .hamburger {
+    display: none;
+}
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
     .hero {
@@ -237,5 +239,36 @@ body {
         bottom: 0;
         margin-top: 40px;
         justify-content: center; /* Centers them under the button */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+        font-size: 1.8rem;
+        color: #64ffda;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Hide menu off-screen to the right */
+        height: 100vh;
+        width: 70%; /* Takes up 70% of screen width */
+        background-color: #112240;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s ease-in-out;
+        box-shadow: -10px 0px 30px rgba(0,0,0,0.5);
+    }
+
+    /* When the checkbox is checked, slide the menu in */
+    .menu-checkbox:checked ~ .nav-links {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
     }
 }
