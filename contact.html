@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Mustafa Hassan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+     <link rel="icon" href="assets/images/logo_black.png" type="image/png">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Mustafa<span>.</span></div>
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+        <label for="menu-toggle" class="hamburger"><i class="fa-solid fa-bars"></i></label>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="contact-section">
+        <div class="container">
+            <h2 class="section-title"> Get In Touch</h2>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Chat!</h3>
+                    <p>I'm currently looking for new opportunities and collaborations. Whether you have a question about a project or just want to say hi, my inbox is always open.</p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <p>mustafahassan@email.com</p> </div>
+                                <a href="https://wa.me/923174124920" target="_blank" class="detail-item whatsapp-link">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <p>+92 317 4124920</p>
+                                </a>
+                        <div class="detail-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <p>Lahore, Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form action="https://formspree.io/f/xeerkpnw" method="POST" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="contact-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
