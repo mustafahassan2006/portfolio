@@ -511,7 +511,17 @@ body {
     border-radius: 20px; /* Pill shape */
     border: 1px solid rgba(100, 255, 218, 0.2);
 }
+.project-link-wrapper {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps your original text colors */
+    display: block;
+    height: 100%;
+}
 
+/* Fixes the cursor so the whole card feels like a button */
+.project-card {
+    cursor: pointer;
+}
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
     .hero {
