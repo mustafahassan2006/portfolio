@@ -34,8 +34,13 @@ body {
     cursor: pointer;
     text-decoration: none;
     transition: all 0.3s ease; /* Makes the color fade in smoothly */
-    color: inherit; 
 }
+
+.logo a, .logo a:visited {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
 
 .logo:hover {
     color: #64ffda; /* Entire name turns teal */
