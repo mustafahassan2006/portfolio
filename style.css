@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -48,7 +47,6 @@ body {
     color: #f8fafc; /* The dot changes to white for contrast */
     transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy pop */
 }
-
 
 .logo span {
     color: #64ffda; /* That cool teal accent color */
@@ -118,12 +116,11 @@ body {
 }
 
 .hero-image-container:hover .blob-shape {
-    /*  change the border-radius values slightly for the "hover" state */
+    /* change the border-radius values slightly for the "hover" state */
     border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; /* Becomes a perfect circle */
     transform: scale(1.05); /* Makes the whole thing grow 5% larger */
     box-shadow: 0 20px 40px rgba(100, 255, 218, 0.2); /* Adds a teal glow */
 }
-
 
 .hero-text {
     flex: 1; /* Takes up left side space */
@@ -193,7 +190,6 @@ body {
     transform: translateY(-5px); /* The "Pop" effect */
 }
 
-
 .btn-resume {
     display: inline-block;
     margin-top: 30px;
@@ -218,10 +214,10 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(100, 255, 218, 0.1); /* Teal tinted shadow */
 }
+
 .menu-checkbox, .hamburger {
     display: none;
 }
-
 
 /* About Section Styles */
 .about-section {
@@ -292,6 +288,7 @@ body {
     mix-blend-mode: normal;
     filter: none;
 }
+
 .pop-word {
     display: inline-block; /* Required for the 'lift' to work */
     transition: transform 0.3s ease, color 0.3s ease;
@@ -460,7 +457,7 @@ body {
 .project-card {
     background: linear-gradient(145deg, #112240, #0a192f); /* Subtle gradient */
     padding: 2rem;
-    border-radius: 12px; /* Made it rounder (previously 4px) */
+    border-radius: 12px;
     border: 1px solid rgba(100, 255, 218, 0.1); /* Very faint border */
     transition: all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
     display: flex;
@@ -468,8 +465,8 @@ body {
     justify-content: space-between;
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
-
 
 .project-card:hover {
     transform: translateY(-10px) scale(1.02); /* Lifts and slightly grows */
@@ -478,20 +475,59 @@ body {
     0 0 15px rgba(100, 255, 218, 0.2); /* Dual shadow for better glow */
 }
 
+/* Fix Card Header Layout */
+.project-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2rem;
+}
 
 .project-folder { 
-    color: #64ffda;
+    font-size: 1.8rem;
+    color: #64ffda; /* Teal accent color */
     text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
     transition: 0.3s;
- }
+}
 
-.project-tech-list {
+.project-links {
     display: flex;
-    list-style: none;
-    gap: 15px;
-    margin-top: 20px;
-    font-family: monospace;
-    font-size: 12px;
+    align-items: center;
+    gap: 12px;
+}
+
+.project-links a {
+    color: #a8b2d1;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.project-links a:hover {
+    color: #64ffda;
+}
+
+/* Modern "Try Demo" Glass/Glow Button */
+.project-links .demo-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #64ffda;
+    background: rgba(100, 255, 218, 0.08);
+    border: 1px solid rgba(100, 255, 218, 0.3);
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.project-links .demo-link:hover {
+    background: #64ffda;
+    color: #0a192f;
+    border-color: #64ffda;
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.4);
 }
 
 .project-tech-list {
@@ -511,6 +547,7 @@ body {
     border-radius: 20px; /* Pill shape */
     border: 1px solid rgba(100, 255, 218, 0.2);
 }
+
 .project-link-wrapper {
     text-decoration: none; /* Removes underline */
     color: inherit; /* Keeps your original text colors */
@@ -518,10 +555,6 @@ body {
     height: 100%;
 }
 
-/* Fixes the cursor so the whole card feels like a button */
-.project-card {
-    cursor: pointer;
-}
 /* Mobile Responsive Fix */
 @media (max-width: 768px) {
     .hero {
@@ -602,7 +635,8 @@ body {
     .skills-list {
         grid-template-columns: 1fr 1fr;
     }
-        .contact-container {
+
+    .contact-container {
         grid-template-columns: 1fr; /* Stack form under info */
     }
     
@@ -610,7 +644,7 @@ body {
         width: 100%; /* Full width button on phone */
     }
 
-        .placeholder-content h3 {
+    .placeholder-content h3 {
         font-size: 1.8rem;
     }
 }
